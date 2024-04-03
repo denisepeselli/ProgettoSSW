@@ -1,0 +1,28 @@
+<div *ngIf="posizione == 'ricerca'">
+  <div *ngIf="unicaCorr == undefined">
+    <h2>Ricerca per titolo e autore</h2>
+    <p>Inserisci la stringa di ricerca:</p>
+
+    <br />
+    <input id="newRicerca" type="text" (input)="input()" />
+  </div>
+  <div id="result"><p id="para"></p></div>
+  <br />
+  <app-prestito
+    [prestito]="prestito"
+    [occorrenza]="occorrenza"
+    [unicaCorr]="unicaCorr"
+    (indietroEvent)="cambioRicerca($event)"
+  ></app-prestito>
+  <br />
+  <app-rimozione
+  [prestito]="prestito" 
+  [posizione]="posizione"
+    [occorrenza]="occorrenza"
+    [unicaCorr]="unicaCorr"
+    *ngIf=" prestito == false"
+    (indietroEvent)="cambioRicerca($event)"
+  ></app-rimozione>
+  <br />
+  <button (click)="clean()" id="indietro">Indietro</button>
+</div>

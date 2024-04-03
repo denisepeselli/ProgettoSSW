@@ -1,0 +1,10 @@
+<div *ngIf="posizione=='principale'" id="buttons">
+  <button (click)="cambio('inserimento')" id="inserimento">Inserimento</button> 
+<br>
+<br>
+<button (click)="cambio('ricerca')" id="ricerca">Ricerca</button>
+</div>
+<app-inserimento [posizione]="posizione" (indietroEvent)="cambio($event)"></app-inserimento>
+<app-ricerca [posizione]="posizione" (indietroEvent)="cambio($event)"></app-ricerca>
+
+

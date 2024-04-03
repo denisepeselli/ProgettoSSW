@@ -1,0 +1,16 @@
+<div *ngIf="unicaCorr == true">
+  <h3>Prestito</h3>
+  <div *ngIf="prestito == false">
+    <p>Nominativo:</p>
+    <input id="newPrestito" /><button
+      id="prestito"
+      (click)="registrazionePrestito()"
+    >
+      Prestito
+  </button>
+  </div>
+  <button *ngIf="prestito == true" id="restituzione" (click)="restituzione()">
+    Restituzione
+  </button>
+  <p id="feedback1"></p>
+</div>

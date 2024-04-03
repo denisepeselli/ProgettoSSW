@@ -1,0 +1,13 @@
+<div *ngIf="posizione=='inserimento' ">
+<h2 >Inserimento di un nuovo volume</h2>
+<p>Titolo:</p> <input id="newTitolo">
+<p>Autore:</p> <input id="newAutore">
+<p>Posizione:</p> <input id="newPosizione">
+<br>
+<br>
+<button (click)="aggiuntalibro()" id="inserisci">Inserisci</button>
+<p id="feedback" ></p>
+<br>
+<br>
+<button (click) ="clean()" id="indietro">Indietro</button>
+</div>
